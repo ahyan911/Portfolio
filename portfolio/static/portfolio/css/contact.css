@@ -1,0 +1,321 @@
+/* =========================
+   Contact Page
+========================= */
+
+:root {
+    --page-bg: #050505;
+    --surface: #111111;
+    --surface-hover: #161616;
+    --border: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #a5a5a5;
+    --text-muted: #707070;
+    --accent: #ffffff;
+    --accent-text: #050505;
+    --error: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--page-bg);
+    color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main page wrapper */
+
+.contact-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 24px 80px;
+}
+
+.contact-container {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+}
+
+/* Page heading */
+
+.contact-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.contact-eyebrow {
+    margin-bottom: 22px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    color: var(--text-primary);
+    font-size: clamp(64px, 10vw, 150px);
+    font-weight: 500;
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+}
+
+/* Two-column layout */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(420px, 1.2fr);
+    gap: 100px;
+    align-items: start;
+}
+
+/* Left content */
+
+.contact-intro {
+    padding-top: 10px;
+}
+
+.contact-intro h2 {
+    max-width: 380px;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+    font-size: clamp(26px, 3vw, 42px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.contact-intro p {
+    max-width: 410px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Form */
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    outline: none;
+    background: var(--surface);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 15px;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 58px;
+    padding: 0 18px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    padding: 18px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    background: var(--surface-hover);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--text-primary);
+    background: var(--surface-hover);
+}
+
+/* Select dropdown */
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #ffffff 50%),
+        linear-gradient(135deg, #ffffff 50%, transparent 50%);
+    background-position:
+        calc(100% - 22px) 25px,
+        calc(100% - 16px) 25px;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.form-group select option {
+    background: var(--surface);
+    color: var(--text-primary);
+}
+
+/* Checkbox */
+
+.checkbox-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 8px 0 30px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+.checkbox-group label {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Submit button */
+
+.contact-submit {
+    min-width: 180px;
+    min-height: 54px;
+    padding: 0 28px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: var(--accent-text);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-submit:hover {
+    background: transparent;
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.contact-submit:active {
+    transform: translateY(0);
+}
+
+/* Help and error text */
+
+.form-help {
+    margin-top: 8px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.form-error {
+    margin-top: 8px;
+    color: var(--error);
+    font-size: 12px;
+}
+
+/* Success message */
+
+.success-message {
+    margin-bottom: 24px;
+    padding: 16px 18px;
+    border: 1px solid #315b3b;
+    background: #0d1c11;
+    color: #b8f5c5;
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .contact-page {
+        padding-top: 32px;
+    }
+
+    .contact-header {
+        margin-bottom: 60px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .contact-intro h2,
+    .contact-intro p {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-page {
+        padding: 24px 18px 60px;
+    }
+
+    .contact-header {
+        margin-bottom: 44px;
+        text-align: left;
+    }
+
+    .contact-title {
+        font-size: clamp(52px, 18vw, 90px);
+        line-height: 0.92;
+    }
+
+    .contact-content {
+        gap: 40px;
+    }
+
+    .contact-intro h2 {
+        font-size: 30px;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
+}
