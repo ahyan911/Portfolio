@@ -1,0 +1,393 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block title %}
+    Syed Ayyan Majid | Python Developer
+{% endblock %}
+
+{% block extra_css %}
+<link
+    rel="stylesheet"
+    href="{% static 'portfolio/css/home.css' %}?v=5"
+>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="home-container hero-grid">
+
+        <div class="hero-content">
+            <p class="section-label">Hello, I’m</p>
+
+            <h1 class="hero-title">
+                Syed Ayyan
+                <span>Majid.</span>
+            </h1>
+
+            <h2 class="hero-role">
+                Python Developer
+                <span class="role-divider">/</span>
+                AI Integration Enthusiast
+            </h2>
+
+            <p class="hero-description">
+                I am a third-year BS Data Science student at Dawood
+                University, focused on strengthening my programming,
+                problem-solving, and artificial intelligence skills
+                through continuous learning and hands-on projects.
+            </p>
+
+            <div class="hero-actions">
+                <a
+                    href="{% url 'portfolio:projects' %}"
+                    class="primary-button"
+                >
+                    View My Projects
+                </a>
+
+                <a
+                    href="{% url 'portfolio:contact' %}"
+                    class="secondary-button"
+                >
+                    Contact Me
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a
+                    href="https://www.linkedin.com/in/syed-ayyan-majid-239524369/"
+                    class="social-link linkedin-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit my LinkedIn profile"
+                >
+                    <span class="social-icon">
+                        <img
+                            src="{% static 'portfolio/images/linkedin-icon.png' %}"
+                            alt=""
+                            aria-hidden="true"
+                        >
+                    </span>
+                    <span class="social-name">LinkedIn</span>
+                </a>
+
+                <a
+                    href="https://www.facebook.com/Ayyansyed8"
+                    class="social-link facebook-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit my Facebook profile"
+                >
+                    <span class="social-icon">
+                        <img
+                            src="{% static 'portfolio/images/facebook-icon.png' %}"
+                            alt=""
+                            aria-hidden="true"
+                        >
+                    </span>
+                    <span class="social-name">Facebook</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="image-decoration"></div>
+
+            <div class="profile-image-container">
+                <img
+                    src="{% static 'portfolio/images/pf.jpg' %}"
+                    alt="Syed Ayyan Majid"
+                    class="profile-image"
+                >
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-icon">&lt;/&gt;</span>
+
+                <div>
+                    <strong>Building Skills</strong>
+                    <p>Python, Data and AI</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="home-container about-grid">
+
+        <div class="section-heading">
+            <p class="section-label">About Me</p>
+
+            <h2>
+                Learning today to build intelligent solutions tomorrow.
+            </h2>
+        </div>
+
+        <div class="about-content">
+            <p>
+                I am an undergraduate Data Science student with a strong
+                interest in Python development, artificial intelligence,
+                machine learning, and software problem-solving.
+            </p>
+
+            <p>
+                I enjoy learning new technologies, improving my technical
+                knowledge, and applying programming concepts to practical
+                projects. My current focus is developing a solid foundation
+                in Python, SQL, data structures, algorithms, and AI integration.
+            </p>
+
+            <div class="personal-details">
+                <div class="detail-item">
+                    <span>Name</span>
+                    <strong>Syed Ayyan Majid</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Field of Study</span>
+                    <strong>BS Data Science</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Current Status</span>
+                    <strong>Undergraduate Student</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Main Interest</span>
+                    <strong>Artificial Intelligence</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Education Section -->
+<section class="education-section">
+    <div class="home-container">
+
+        <div class="centered-heading">
+            <p class="section-label">Academic Journey</p>
+            <h2>Education</h2>
+
+            <p>
+                My academic background has helped me build a strong interest
+                in technology, programming, data, and intelligent systems.
+            </p>
+        </div>
+
+        <div class="education-timeline">
+
+            <article class="education-card">
+                <div class="education-year">2022</div>
+
+                <div class="education-content">
+                    <p class="education-type">Matriculation</p>
+
+                    <h3>Computer Science</h3>
+
+                    <p>
+                        Completed my matriculation with a Computer Science
+                        background, where I developed an early interest in
+                        computers and technology.
+                    </p>
+                </div>
+            </article>
+
+            <article class="education-card">
+                <div class="education-year">2024</div>
+
+                <div class="education-content">
+                    <p class="education-type">Intermediate</p>
+
+                    <h3>Intermediate in Computer Science — ICS</h3>
+
+                    <p>
+                        Completed my Intermediate education in Computer
+                        Science, strengthening my understanding of computing,
+                        mathematics, and analytical problem-solving.
+                    </p>
+                </div>
+            </article>
+
+            <article class="education-card current-education">
+                <div class="education-year">Present</div>
+
+                <div class="education-content">
+                    <p class="education-type">Undergraduate Degree</p>
+
+                    <h3>BS Data Science</h3>
+
+                    <p>
+                        Currently studying Data Science at Dawood University
+                        and developing skills in programming, databases,
+                        algorithms, artificial intelligence, and data-driven
+                        problem-solving.
+                    </p>
+
+                    <span class="current-badge">Currently Studying</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <div class="home-container">
+
+        <div class="skills-header">
+            <div>
+                <p class="section-label">Technical Skills</p>
+
+                <h2>
+                    Technologies I am learning and working with.
+                </h2>
+            </div>
+
+            <p class="skills-introduction">
+                I am continuously improving my technical foundation through
+                academic learning, coding practice, and practical projects.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+
+            <article class="skill-card">
+                <div class="skill-number">01</div>
+
+                <div class="skill-icon cplusplus-icon">
+                    <img
+                        src="{% static 'portfolio/images/cplusplus-icon.png' %}"
+                        alt="C++ logo"
+                    >
+                </div>
+
+                <h3>C++</h3>
+
+                <p>
+                    Building programming fundamentals, logical thinking,
+                    object-oriented concepts, and efficient problem-solving.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Programming</span>
+                    <span>OOP</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-number">02</div>
+
+                <div class="skill-icon python-icon">
+                    <img
+                        src="{% static 'portfolio/images/py-icon.png' %}"
+                        alt="Python logo"
+                    >
+                </div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Developing applications, working with data, automating
+                    tasks, and exploring artificial intelligence integrations.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Development</span>
+                    <span>AI</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-number">03</div>
+
+                <div class="skill-icon sql-icon">
+                    <img
+                        src="{% static 'portfolio/images/sql-icon.png' %}"
+                        alt="SQL logo"
+                    >
+                </div>
+
+                <h3>SQL</h3>
+
+                <p>
+                    Learning how to create, manage, query, and organize
+                    structured data using relational databases.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Database</span>
+                    <span>Queries</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-number">04</div>
+
+                <div class="skill-icon dsa-icon">
+                    <img
+                        src="{% static 'portfolio/images/dsa-icon.png' %}"
+                        alt="Data Structures and Algorithms logo"
+                    >
+                </div>
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p>
+                    Improving problem-solving skills by studying efficient
+                    data organization, algorithms, and programming techniques.
+                </p>
+
+                <div class="skill-tags">
+                    <span>Logic</span>
+                    <span>Problem Solving</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Career Goal Section -->
+<section class="career-section">
+    <div class="home-container career-card">
+
+        <div class="career-content">
+            <p class="section-label">Career Goal</p>
+
+            <h2>
+                Becoming an AI or Machine Learning Engineer.
+            </h2>
+
+            <p>
+                My goal is to build a career as an Artificial Intelligence
+                Engineer or Machine Learning Engineer. I want to create
+                intelligent, practical, and data-driven solutions that solve
+                real-world problems and create meaningful impact.
+            </p>
+        </div>
+
+        <a
+            href="{% url 'portfolio:contact' %}"
+            class="career-link"
+        >
+            Let’s Connect
+            <span>↗</span>
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

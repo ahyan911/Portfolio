@@ -1,0 +1,307 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block title %}Projects | Syed Ayyan Majid{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'portfolio/css/projects.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="projects-hero">
+    <div class="projects-container">
+        <p class="projects-eyebrow">Selected Work</p>
+        <div class="projects-hero-grid">
+            <h1>Projects built with <span>Python, AI and data.</span></h1>
+            <p>
+                A selection of practical applications I created while learning
+                Python development, artificial intelligence, retrieval-augmented
+                generation, APIs and interactive user interfaces.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="projects-container">
+        <div class="projects-grid">
+
+            <article class="project-card project-featured">
+                <div class="project-image-area">
+                    <img src="{% static 'portfolio/images/rag-system.png' %}"
+                         alt="RAG document assistant project"
+                         class="project-image">
+                    <span class="project-number">01</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <p class="project-category">Artificial Intelligence</p>
+                            <h2>RAG Document Assistant</h2>
+                        </div>
+                        <span class="project-status">Live</span>
+                    </div>
+
+                    <p class="project-description">
+                        An AI-powered document question-answering system that
+                        downloads a PDF from Google Drive, extracts and divides
+                        its content into searchable chunks, creates vector
+                        embeddings, and retrieves the most relevant context
+                        before generating an answer with a Groq-hosted model.
+                    </p>
+
+                    <div class="project-features">
+                        <span>PDF knowledge-base loading</span>
+                        <span>Semantic similarity search</span>
+                        <span>Context-grounded AI answers</span>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Gradio</span>
+                        <span>Groq API</span>
+                        <span>Llama 3.3 70B</span>
+                        <span>LangChain</span>
+                        <span>FAISS</span>
+                        <span>Hugging Face Embeddings</span>
+                        <span>PyPDF</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://huggingface.co/spaces/Aeyyan/RagBasedSystem"
+                           class="project-primary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Project <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-area">
+                    <img src="{% static 'portfolio/images/yt-transcription.png' %}"
+                         alt="YouTube video transcription and RAG assistant project"
+                         class="project-image">
+                    <span class="project-number">02</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <p class="project-category">AI Video Assistant</p>
+                            <h2>YouTube RAG Assistant</h2>
+                        </div>
+                        <span class="project-status">Live</span>
+                    </div>
+
+                    <p class="project-description">
+                        A conversational video assistant that retrieves a
+                        YouTube transcript, splits it into overlapping chunks,
+                        converts the content into vector embeddings, and lets
+                        users ask questions using transcript-grounded answers.
+                    </p>
+
+                    <div class="project-features">
+                        <span>YouTube transcript extraction</span>
+                        <span>Transcript preview and statistics</span>
+                        <span>Conversational RAG search</span>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Gradio</span>
+                        <span>Groq API</span>
+                        <span>Llama 3.3 70B</span>
+                        <span>Supadata API</span>
+                        <span>Sentence Transformers</span>
+                        <span>FAISS</span>
+                        <span>NumPy</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://huggingface.co/spaces/Aeyyan/YoutubeVideoTranscription"
+                           class="project-primary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Project <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-area">
+                    <img src="{% static 'portfolio/images/ad-calculator.png' %}"
+                         alt="Advanced scientific calculator project"
+                         class="project-image">
+                    <span class="project-number">03</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <p class="project-category">Python Application</p>
+                            <h2>Advanced Calculator</h2>
+                        </div>
+                        <span class="project-status">Live</span>
+                    </div>
+
+                    <p class="project-description">
+                        A responsive calculator supporting arithmetic, powers,
+                        square root, logarithm, sine, and cosine. It also keeps
+                        a session-based history of completed calculations.
+                    </p>
+
+                    <div class="project-features">
+                        <span>Standard calculations</span>
+                        <span>Scientific operations</span>
+                        <span>Calculation history</span>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>Python Math</span>
+                        <span>Session State</span>
+                        <span>Custom CSS</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://huggingface.co/spaces/Aeyyan/AdvancedCalculator"
+                           class="project-primary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Project <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image-area">
+                    <img src="{% static 'portfolio/images/linkedin-gen.png' %}"
+                         alt="AI LinkedIn post generator project"
+                         class="project-image">
+                    <span class="project-number">04</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <p class="project-category">Generative AI</p>
+                            <h2>AI LinkedIn Post Generator</h2>
+                        </div>
+                        <span class="project-status">Live</span>
+                    </div>
+
+                    <p class="project-description">
+                        A generative-AI writing assistant that creates
+                        structured LinkedIn posts from a topic. Users can
+                        choose tone, length, emoji preference, and the number
+                        of hashtags before generating and copying the result.
+                    </p>
+
+                    <div class="project-features">
+                        <span>Custom tone and length</span>
+                        <span>Configurable emojis and hashtags</span>
+                        <span>Clipboard copy action</span>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Gradio</span>
+                        <span>Groq API</span>
+                        <span>Llama 3.1 8B Instant</span>
+                        <span>JavaScript</span>
+                        <span>Prompt Engineering</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://huggingface.co/spaces/Aeyyan/LINKEDinPosTgenerator"
+                           class="project-primary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Project <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-wide">
+                <div class="project-image-area">
+                    <img src="{% static 'portfolio/images/quiz-sys.png' %}"
+                         alt="Interactive quiz-based learning system"
+                         class="project-image">
+                    <span class="project-number">05</span>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-heading">
+                        <div>
+                            <p class="project-category">Interactive Web Application</p>
+                            <h2>Quiz-Based System</h2>
+                        </div>
+                        <span class="project-status">Live</span>
+                    </div>
+
+                    <p class="project-description">
+                        An interactive browser-based quiz platform with
+                        selectable difficulty, timed questions, score tracking,
+                        correct, incorrect and skipped-answer statistics,
+                        optional negative marking, and locally stored quiz
+                        history. Questions are managed through a JSON bank.
+                    </p>
+
+                    <div class="project-features">
+                        <span>Timed multiple-choice quizzes</span>
+                        <span>Difficulty and negative marking</span>
+                        <span>Score, result and history tracking</span>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>JSON</span>
+                        <span>Local Storage</span>
+                        <span>Vercel</span>
+                        <span>Railway</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://quizbased-system.vercel.app"
+                           class="project-primary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Live Project <span>↗</span>
+                        </a>
+
+                        <a href="https://github.com/ahyan911/QuizbasedSystem"
+                           class="project-secondary-link"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View Source Code
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="projects-cta">
+    <div class="projects-container projects-cta-card">
+        <div>
+            <p class="projects-eyebrow">Let’s Work Together</p>
+            <h2>Have a project or opportunity in mind?</h2>
+        </div>
+
+        <a href="{% url 'portfolio:contact' %}" class="projects-contact-link">
+            Contact Me <span>↗</span>
+        </a>
+    </div>
+</section>
+{% endblock %}
