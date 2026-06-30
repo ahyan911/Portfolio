@@ -1,4 +1,0 @@
-Django
-dj-database-url
-psycopg
-psycopg-binary
